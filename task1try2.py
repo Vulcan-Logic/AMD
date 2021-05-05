@@ -23,10 +23,10 @@ def computeEquation(equationString):
     if len(equationString)==0:
         raise Exception("E001","Empty Equation passed")
     elif len(equationString)==1:
-        if equationString[0] not in ["0","1","2","3","4","5","6","7","8","9"]:
+        if equationString[0] in ["0","1","2","3","4","5","6","7","8","9"]:
             return(float(equationString))
         else: 
-            Exception("E002","invalid equation")
+            raise Exception("E002","invalid equation")
     else:
         equationList=list(equationString)
         try: 
